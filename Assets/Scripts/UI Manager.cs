@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(true);
     }
 
-
     public void EnablePause()
     {
         DissableAllUIPanels();

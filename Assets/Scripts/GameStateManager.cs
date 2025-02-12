@@ -69,6 +69,8 @@ public class GameStateManager : MonoBehaviour
             case GameState.MainMenu_State:
                 Debug.Log("Switched to MainMenu State");
 
+                Cursor.visible = true;
+
                 gameManager.UIManager.EnableMainMenu();
 
                 Time.timeScale = 1;
@@ -77,6 +79,8 @@ public class GameStateManager : MonoBehaviour
             case GameState.Gameplay_State:
                 Debug.Log("Switched to Gameplay State");
 
+                Cursor.visible = false;
+
                 gameManager.UIManager.EnableGameplay();
 
                 Time.timeScale = 1;
@@ -84,6 +88,8 @@ public class GameStateManager : MonoBehaviour
 
             case GameState.Paused_State:
                 Debug.Log("Switched to Paused State");
+
+                Cursor.visible = true;
 
                 gameManager.UIManager.EnablePause();
 
